@@ -3,8 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%-- head 영역  include head.jsp --%>
-<jsp:include page="/WEB-INF/views/include/head.jsp"/>
+<title>fileWriteForm</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/css/index.css" />
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/bootstrap-theme.css" />
+<link rel="stylesheet" href="/css/font-awesome.min.css" />
 <style>
 	span.fileDelete {
 		color: red;
@@ -14,22 +18,21 @@
 </style>
 </head>
 <body>
-<div id="wrap">
-	<%-- header 영역  include top.jsp --%>
-	<jsp:include page="/WEB-INF/views/include/top.jsp" />
+	<div id="top-menu">
+		<%-- top 영역  include top.jsp --%>
+		<jsp:include page="/WEB-INF/views/include/top.jsp" />
+	</div>
 
-	<div class="clear"></div>
-	<div id="sub_img_center"></div>
+	<div id="wrapper">
+		<div id="page" class="container">
 	
-	<div class="clear"></div>
-	<jsp:include page="/WEB-INF/views/include/board_submenu.jsp"/>
-	
+	<div class="table-responsive">
 	<article>
 		
 	<h1>파일 게시판 글작성</h1>
 	
-	<form action="fileWritePro.do" method="post" enctype="multipart/form-data" name="frm">
-	<table id="notice">
+	<form action="/fileWritePro.do" method="post" enctype="multipart/form-data" name="frm">
+	<table class="table table-striped" id="table table-striped">
 		<tr>
 			<th scope="col" width="200">아이디</th>
 			<td style="text-align: left; width: 500px;">
@@ -45,7 +48,7 @@
 		<tr>
 			<th scope="col">파일</th>
 			<td style="text-align: left;">
-				<button type="button" id="btnAddFile">첨부파일 추가</button>
+				<button type="button" class="button" id="btnAddFile">첨부파일 추가</button>
 				<div id="fileBox">
 					<div>
 						<input type="file" name="filename">
@@ -63,9 +66,9 @@
 	</table>
 
 	<div id="table_search">
-		<button type="submit">파일글쓰기</button>
-		<button type="reset">다시쓰기</button>
-		<button type="button" onclick="location.href='fileNotice.do?pageNum=${ pageNum }'">목록보기</button>
+		<button type="submit" class="button">파일글쓰기</button>
+		<button type="reset" class="button">다시쓰기</button>
+		<button type="button" class="button" onclick="location.href='fileNotice.do?pageNum=${ pageNum }'">목록보기</button>
 	</div>
 	</form>
 	
@@ -74,14 +77,24 @@
 	</div>
 		
 	</article>
+	</div>
+	</div>
+	</div>
     
 	<div class="clear"></div>
 	<%-- footer 영역  include bottom.jsp --%>
 	<jsp:include page="/WEB-INF/views/include/bottom.jsp"/>
-</div>
 
+	<!-- Scripts -->
+	<script src="/script/jquery.min.js"></script>
+	<script src="/script/jquery.scrolly.min.js"></script>
+	<script src="/script/jquery.scrollex.min.js"></script>
+	<script src="/script/skel.min.js"></script>
+	<script src="/script/util.js"></script>
+	<script src="/script/main.js"></script>
+	<script src="/script/bootstrap.js"></script>
+	<script src="/script/jquery-3.5.1.js"></script>
 
-<script src="/script/jquery-3.5.1.js"></script>
 <script>
 	var fileCount = 1;
 
