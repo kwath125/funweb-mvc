@@ -34,16 +34,16 @@ public class AdminChartsAction implements Action {
 			
 		ChartDao dao = ChartDao.getInstance();
 		List<List<Object>> dateList = dao.getBoardDate();
-		System.out.println(dateList);
+		System.out.println("dateList = " + dateList);
 		List<List<Object>> ageList = dao.getAge();
-		System.out.println(ageList);
+		System.out.println("ageList = " + ageList);
 
 		
 		Gson gson = new Gson();
 		String dateStr = gson.toJson(dateList);
-		System.out.println(dateStr);
+		System.out.println("dateStr  = " + dateStr);
 		String ageStr = gson.toJson(ageList);
-		System.out.println(ageStr);
+		System.out.println("ageStr  = " + ageStr);
 		
 		// 뷰(jsp)에서 사용할 데이터를 request 영역객체에 저장
 		request.setAttribute("dateStr", dateStr);

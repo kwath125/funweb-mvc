@@ -57,6 +57,7 @@ public class FileModifyProAction implements Action {
 		
 		
 		List<FileItem> list = upload.parseRequest(request); // 멀티파트 바이트 조립해서 파일아이템 리스트로 반환
+		System.out.println("list = " + list);
 		
 		
 		// DB객체 가져오기
@@ -84,13 +85,14 @@ public class FileModifyProAction implements Action {
 				} else if (item.getFieldName().equals("num")) { // 수정할 글번호 파라미터
 					vo.setNum(Integer.parseInt(item.getString("utf-8")));
 				} else if (item.getFieldName().equals("delfile")) {
-					System.out.println("delfile: " + item.getString("utf-8"));
 					
 					String uuid = item.getString("utf-8");
+					System.out.println("uuid = " + uuid);
 					AttachfileVo attachVo = attachDao.getAttachfileByUuid(uuid);
 					
 					// 파일삭제
 					File delFile = new File(attachVo.getUploadpath(), attachVo.getUuid() + "_" + attachVo.getFilename());
+					System.out.println("delFile = " + delFile);
 					if (delFile.exists()) {
 						delFile.delete();
 					}

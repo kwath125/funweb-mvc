@@ -32,7 +32,7 @@ public class FileModifyFormAction implements Action {
 			out.close();
 			return null;
 		}
-
+		
 
 		String pageNum = request.getParameter("pageNum");
 		int num = Integer.parseInt(request.getParameter("num"));

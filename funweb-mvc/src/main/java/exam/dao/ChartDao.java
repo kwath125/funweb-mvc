@@ -83,6 +83,7 @@ public class ChartDao {
 			sql += "GROUP BY age_range; ";
 			
 			pstmt = con.prepareCall(sql);
+			System.out.println("sql2" + sql);
 			rs = pstmt.executeQuery();
 			
 			while (rs.next()) {

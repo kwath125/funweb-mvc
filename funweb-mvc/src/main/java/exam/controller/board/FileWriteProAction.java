@@ -104,6 +104,7 @@ public class FileWriteProAction implements Action {
 					
 					// 파일정보 담기위한 AttachfileVo 객체 생성
 					AttachfileVo attachVo = new AttachfileVo();
+					System.out.println("attachVo = " + attachVo);
 					// 게시판 글번호 설정
 					attachVo.setBno(num);
 					// 업로드 경로 설정

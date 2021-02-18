@@ -29,6 +29,7 @@ public class ContentAction implements Action {
 			vo.setContent(content);
 		}
 		
+		
 		// jsp에서 사용할 데이터를 영역객체에 저장
 		request.setAttribute("boardVo", vo);
 		request.setAttribute("pageNum", pageNum);

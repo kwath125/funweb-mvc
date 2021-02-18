@@ -28,7 +28,7 @@ public interface BoardMapper {
 			@Param("pageSize") int pageSize,
 			@Param("category") String category,
 			@Param("search") String search);
-	
+			
 	
 	BoardVo getBoardByNum(int num);
 	

@@ -35,7 +35,7 @@ public class ReplyWriteProAction implements Action {
 		// DB객체 가져오기
 		BoardDao dao = BoardDao.getInstance();
 		// 주글 한개 등록
-		dao.replyInsert(vo);
+		dao.replyInsert(vo) ;
 		
 		// notice.do로 리다이렉트 이동정보 리턴
 		return "redirect:/notice.do?pageNum=" + pageNum;

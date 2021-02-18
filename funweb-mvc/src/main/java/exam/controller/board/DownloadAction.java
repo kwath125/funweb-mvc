@@ -48,6 +48,7 @@ public class DownloadAction implements Action {
 			mimeType = "application/octet-stream";
 		}
 		
+		
 		response.setContentType(mimeType);
 		
 		System.out.println("utf-8 filename = " + filename);

@@ -28,6 +28,7 @@ public class WriteProAction implements Action {
 		
 		// DB객체 가져오기
 		BoardDao dao = BoardDao.getInstance();
+		
 		// 주글 한개 등록
 		dao.insert(vo);
 		

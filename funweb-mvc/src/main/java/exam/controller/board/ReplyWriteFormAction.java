@@ -16,6 +16,7 @@ public class ReplyWriteFormAction implements Action {
 		vo.setReRef(Integer.parseInt(request.getParameter("reRef")));
 		vo.setReLev(Integer.parseInt(request.getParameter("reLev")));
 		vo.setReSeq(Integer.parseInt(request.getParameter("reSeq")));
+		
 		String strPageNum = request.getParameter("pageNum");
 		
 		int pageNum = Integer.parseInt(strPageNum);

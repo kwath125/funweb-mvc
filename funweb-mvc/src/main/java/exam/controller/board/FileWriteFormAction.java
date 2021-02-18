@@ -21,7 +21,7 @@ public class FileWriteFormAction implements Action {
 		if (id == null) {
 			return "redirect:/memberLogin.do";
 		}
-
+		
 		// 로그인 한 사용자면
 		String pageNum = request.getParameter("pageNum");
 		

@@ -41,6 +41,7 @@ public class NoticeAction implements Action {
 		if (strPageNum == null || strPageNum.equals("")) {
 			strPageNum = "1";
 		}
+		
 		//strPageNum = (strPageNum == null) ? "1" : strPageNum;
 		
 		// 문자열 페이지번호를 숫자로 변환

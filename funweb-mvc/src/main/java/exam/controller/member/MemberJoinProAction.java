@@ -15,6 +15,7 @@ public class MemberJoinProAction implements Action {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("MemberJoinProAction");
 		
+		
 		// 파라미터 가져와서 VO에 채우기
 		MemberVo vo = new MemberVo();
 		vo.setId(request.getParameter("id"));

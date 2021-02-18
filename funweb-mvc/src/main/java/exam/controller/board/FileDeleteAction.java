@@ -38,7 +38,6 @@ public class FileDeleteAction implements Action {
 			return null;
 		}
 		
-		
 		// num  pageNum  파라미터 가져오기
 		int bno = Integer.parseInt(request.getParameter("num"));
 		String pageNum = request.getParameter("pageNum");

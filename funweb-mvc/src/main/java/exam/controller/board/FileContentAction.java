@@ -53,6 +53,7 @@ public class FileContentAction implements Action {
 		if (vo.getContent() != null) {
 			content = vo.getContent().replace("\r\n", "<br>");
 			vo.setContent(content);
+			System.out.println("content = " + content);
 		}
 		
 		// jsp화면(뷰) 만들때 필요한 데이터를 영역객체에 저장
